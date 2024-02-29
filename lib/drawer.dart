@@ -20,7 +20,7 @@ class MyDrawer extends StatelessWidget {
               style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.w700,
-                  color: Colors.white
+                  color: Colors.white        
                 ),
               ),
           ),
@@ -49,9 +49,21 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('LOOKBOOK'),
+            title: const Text('LOOKBOOK_21'),
             onTap: () {
-              Navigator.popAndPushNamed(context, '/lookbook');
+              Navigator.popAndPushNamed(context, '/lookbook_21');
+            },
+          ),
+          ListTile(
+            title: const Text('LOOKBOOK_22'),
+            onTap: () {
+              Navigator.popAndPushNamed(context, '/lookbook_22');
+            },
+          ),
+          ListTile(
+            title: const Text('LOOKBOOK_23'),
+            onTap: () {
+              Navigator.popAndPushNamed(context, '/lookbook_23');
             },
           ),
           ListTile(

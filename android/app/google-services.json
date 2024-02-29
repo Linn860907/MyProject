@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "764475060735",
+    "project_id": "linnonlineshop",
+    "storage_bucket": "linnonlineshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764475060735:android:1204c034b0e3e8dd8877ca",
+        "android_client_info": {
+          "package_name": "com.example.onlineshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNlXlLdQAp_3zSgzBcKGqvN31HLUC3oI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

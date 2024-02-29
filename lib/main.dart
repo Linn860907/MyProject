@@ -1,72 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:onlineshop/firebase/home.dart';
 import 'drawer.dart';
 import 'conceptproject.dart';
 import 'currency.dart';
 import 'language.dart';
-import 'lookbook.dart';
+import 'lookbook_21.dart';
+import 'lookbook_22.dart';
+import 'lookbook_23.dart';
 import 'store.dart';
 import 'AboutMillionFlash.dart';
+import 'person.dart';
+import 'shopping_cart.dart';
+import 'category_page.dart';
+import 'firebase/app.dart';
+import 'firebase_options.dart';
 
+const clientId = 'YOUR_CLIENT_ID';
+void main() async {
+WidgetsFlutterBinding.ensureInitialized();  // 初始化 Flutter 應用程序綁定
+await Firebase.initializeApp(  // 初始化 Firebase 應用
+    options: DefaultFirebaseOptions.currentPlatform,  // 使用默認 Firebase 選項
+);
 
-void main(){
-  runApp(const MyApp());
-} 
+runApp(const MyApp());  // 運行我們的 Flutter 應用程序
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
-  @override
-  Widget build(BuildContext context){
-    return MaterialApp(  
-      title: 'My App',
-      initialRoute: '/', //加route
-      routes: {
-        '/': (context) => const MyHomePage(),
-        '/currency': (context) => const Currency(),  
-        '/language': (context) => const language(),
-        '/store': (context) => const store(),
-        '/lookbook': (context) => const lookBook(),
-        '/concept project': (context) => const ConceptProject(),
-        '/about millionflash': (context) => const AboutMillionFlash()
-      }, 
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const MyDrawer(),
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-      title: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-          image:AssetImage('assets/IMG_8162.jpeg'),
-          fit:BoxFit.scaleDown),
-          ),
-          height: 80,
-          ),
-        elevation: 0.0,
-        automaticallyImplyLeading: true,
-           actions: <Widget>[
-                 IconButton(
-                   icon: const Icon(Icons.shopping_cart),
-                   tooltip: 'Shopping_cart',
-                   onPressed: () => debugPrint('Shopping_cart button is pressed.'),
-                 ),
-                 IconButton(
-                   icon: const Icon(Icons.person),
-                   tooltip: 'Person',
-                 onPressed: () => debugPrint('Person button is pressed.'),
-                 ),
-              ],
-            ),
-            body: null,
-          );
-    }
+    return MaterialApp(
+      theme: ThemeData(
+      primaryColor: Colors.blue,  // 将此颜色与您期望的 selected 颜色一致
+),
+      initialRoute: '/',
+      routes: {
+        '/': (context) =>  const home_page(),
+        '/currency': (context) => const Currency(),
+        '/language': (context) => const language(),
+        '/store': (context) =>  store(),
+        '/lookbook_21': (context) => const lookBook_21(),
+        '/lookbook_22': (context) => const lookBook_22(),
+        '/lookbook_23': (context) => const lookBook_23(),
+        '/concept project': (context) => const ConceptProject(),
+        '/about millionflash': (context) => const AboutMillionFlash(),
+        '/drawer': (context) => const MyDrawer(),
+        '/person_1': (context) => const person_1(),
+        '/shopping_cart': (context) => const Shopping_cart(),
+        '/category_page': (context) => const CategoryPage(),
+      },
+    );
+  }
 }
 
