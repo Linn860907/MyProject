@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
 
@@ -31,10 +32,21 @@ class _person_1State extends State<person_1> {
         automaticallyImplyLeading: true,
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: () => debugPrint('Search button is pressed.'),
-          ),
+            icon: const Icon(Icons.person),
+            tooltip: 'person',
+            onPressed: (){
+              Navigator.push(context,
+              MaterialPageRoute<ProfileScreen>(
+                builder: (context) => ProfileScreen(
+                  appBar:AppBar(
+                    title:const Text('User Profile'),),
+                    actions: [
+                      SignedOutAction((context){
+                        Navigator.of(context).pop();
+                      })
+                    ],)
+                ));
+            })
         ],
       ),
       bottomNavigationBar: BottomNavigationWidget(
@@ -64,7 +76,7 @@ void _navigateToPage(int index, BuildContext context) {
         Navigator.pushNamed(context, '/lookbook_21');
         break;
       case 3:
-        Navigator.pushNamed(context,'/lookbook_22');
+        Navigator.pushNamed(context,'/person_1');
       // Add cases for other pages
     }
   }
@@ -109,16 +121,19 @@ Widget build(BuildContext context) {
   }
 }
 
-class person_2 extends StatefulWidget {
+class person_2 extends StatelessWidget {
   const person_2({super.key});
 
   @override
-  State<person_2> createState() => _person_2State();
-}
-
-class _person_2State extends State<person_2> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+            child: Column(
+            children: [
+                const SignOutButton(),
+            ],
+          ),
+        ),
+    );
   }
 }

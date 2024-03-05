@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
 
@@ -23,15 +24,21 @@ class lookBook_22 extends StatelessWidget {
         automaticallyImplyLeading: true,
            actions: <Widget>[
                  IconButton(
-                   icon: const Icon(Icons.shopping_cart),
-                   tooltip: 'Shopping_cart',
-                   onPressed: () => debugPrint('Shopping_cart button is pressed.'),
-                 ),
-                 IconButton(
-                   icon: const Icon(Icons.person),
-                   tooltip: 'Person',
-                 onPressed: () => debugPrint('Person button is pressed.'),
-                 ),
+                               icon: const Icon(Icons.person),
+            tooltip: 'person',
+            onPressed: (){
+              Navigator.push(context,
+              MaterialPageRoute<ProfileScreen>(
+                builder: (context) => ProfileScreen(
+                  appBar:AppBar(
+                    title:const Text('User Profile'),),
+                    actions: [
+                      SignedOutAction((context){
+                        Navigator.of(context).pop();
+                      })
+                    ],)
+                ));
+            })
               ],
             ),
         body:  const lookbook_twentytwo(),

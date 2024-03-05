@@ -8,7 +8,7 @@ environment:
 
 dependencies:
     firebase_auth: 
-    firebase_core: 
+    firebase_core: ^2.25.5 
     firebase_ui_auth: 
     firebase_ui_oauth_google: 
     flutter:
@@ -16,6 +16,11 @@ dependencies:
     google_sign_in:
     shared_preferences: 
     flutter_screenutil:
+    firebase_analytics: ^10.8.7 
+    banner_carousel:
+    firebase_storage:
+    get: 
+
 
 dev_dependencies:
     flutter_test:
@@ -27,4 +32,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
- 
+    - assets/items/

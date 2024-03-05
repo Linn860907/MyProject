@@ -78,6 +78,12 @@ class MyDrawer extends StatelessWidget {
               Navigator.popAndPushNamed(context, '/about millionflash');
             },
           ),
+          ListTile(
+            title: const Text('PX'),
+            onTap: () {
+              Navigator.popAndPushNamed(context, '/px');
+            },
+          ),
         ],
       ),
     );

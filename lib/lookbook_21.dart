@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
 
@@ -31,10 +32,21 @@ class _lookBook_21State extends State<lookBook_21> {
         automaticallyImplyLeading: true,
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: () => debugPrint('Search button is pressed.'),
-          ),
+                        icon: const Icon(Icons.person),
+            tooltip: 'person',
+            onPressed: (){
+              Navigator.push(context,
+              MaterialPageRoute<ProfileScreen>(
+                builder: (context) => ProfileScreen(
+                  appBar:AppBar(
+                    title:const Text('User Profile'),),
+                    actions: [
+                      SignedOutAction((context){
+                        Navigator.of(context).pop();
+                      })
+                    ],)
+                ));
+            })
         ],
       ),
       bottomNavigationBar: BottomNavigationWidget(
@@ -58,11 +70,13 @@ void _navigateToPage(int index, BuildContext context) {
         Navigator.pushNamed(context, '/');
         break;
       case 1:
-        Navigator.pushNamed(context, '/store');
+        Navigator.pushNamed(context, '/drawer');
         break;
       case 2:
         Navigator.pushNamed(context, '/lookbook_21');
         break;
+      case 3:
+        Navigator.pushNamed(context,'/person_1');
       // Add cases for other pages
     }
   }
@@ -138,7 +152,7 @@ Widget build(BuildContext context) {
     ],
     currentIndex: currentIndex,
     onTap: onTap,
-    selectedItemColor: Colors.red,
+    selectedItemColor: Colors.black,
     unselectedItemColor: Colors.grey,
     );
   }

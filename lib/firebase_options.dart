@@ -66,6 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
     storageBucket: 'linnonlineshop.appspot.com',
+    androidClientId: '764475060735-bl5ad4ddj3lc8296p40p7gnqtnbuovri.apps.googleusercontent.com',
+    iosClientId: '764475060735-4r1vu2f2vjj6o71jvob1heuv1v24hini.apps.googleusercontent.com',
     iosBundleId: 'com.example.onlineshop',
   );
 
@@ -75,6 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
     storageBucket: 'linnonlineshop.appspot.com',
+    androidClientId: '764475060735-bl5ad4ddj3lc8296p40p7gnqtnbuovri.apps.googleusercontent.com',
+    iosClientId: '764475060735-ifd73rvhqp921mnfsc5td2bc0odb86lv.apps.googleusercontent.com',
     iosBundleId: 'com.example.onlineshop.RunnerTests',
   );
 }
