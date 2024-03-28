@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
     authDomain: 'linnonlineshop.firebaseapp.com',
+    databaseURL: 'https://linnonlineshop-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'linnonlineshop.appspot.com',
   );
 
@@ -57,6 +58,7 @@ class DefaultFirebaseOptions {
     appId: '1:764475060735:android:1204c034b0e3e8dd8877ca',
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
+    databaseURL: 'https://linnonlineshop-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'linnonlineshop.appspot.com',
   );
 
@@ -65,9 +67,9 @@ class DefaultFirebaseOptions {
     appId: '1:764475060735:ios:79377ea6f63d07ac8877ca',
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
+    databaseURL: 'https://linnonlineshop-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'linnonlineshop.appspot.com',
-    androidClientId: '764475060735-bl5ad4ddj3lc8296p40p7gnqtnbuovri.apps.googleusercontent.com',
-    iosClientId: '764475060735-4r1vu2f2vjj6o71jvob1heuv1v24hini.apps.googleusercontent.com',
+    androidClientId: '764475060735-0cl6fd2uvcdv8d0hm8f98spusl546bac.apps.googleusercontent.com',
     iosBundleId: 'com.example.onlineshop',
   );
 
@@ -76,9 +78,9 @@ class DefaultFirebaseOptions {
     appId: '1:764475060735:ios:15d2ca57b0c10d908877ca',
     messagingSenderId: '764475060735',
     projectId: 'linnonlineshop',
+    databaseURL: 'https://linnonlineshop-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'linnonlineshop.appspot.com',
-    androidClientId: '764475060735-bl5ad4ddj3lc8296p40p7gnqtnbuovri.apps.googleusercontent.com',
-    iosClientId: '764475060735-ifd73rvhqp921mnfsc5td2bc0odb86lv.apps.googleusercontent.com',
+    androidClientId: '764475060735-0cl6fd2uvcdv8d0hm8f98spusl546bac.apps.googleusercontent.com',
     iosBundleId: 'com.example.onlineshop.RunnerTests',
   );
 }

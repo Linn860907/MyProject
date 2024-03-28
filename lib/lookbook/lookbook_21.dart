@@ -1,7 +1,7 @@
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
-import 'drawer.dart';
-
+import '../drawer.dart';
+import '../itemlist/cart_product.dart';
 
 class lookBook_21 extends StatefulWidget {
   const lookBook_21({super.key});
@@ -31,22 +31,26 @@ class _lookBook_21State extends State<lookBook_21> {
         elevation: 0.0,
         automaticallyImplyLeading: true,
         actions: <Widget>[
+          IconButton(icon: const Icon(Icons.add_shopping_cart),
+          onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> const cart_product()));}),
           IconButton(
-                        icon: const Icon(Icons.person),
-            tooltip: 'person',
-            onPressed: (){
-              Navigator.push(context,
-              MaterialPageRoute<ProfileScreen>(
-                builder: (context) => ProfileScreen(
-                  appBar:AppBar(
-                    title:const Text('User Profile'),),
-                    actions: [
-                      SignedOutAction((context){
-                        Navigator.of(context).pop();
-                      })
-                    ],)
-                ));
-            })
+              icon: const Icon(Icons.person),
+              tooltip: 'person',
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<ProfileScreen>(
+                        builder: (context) => ProfileScreen(
+                              appBar: AppBar(
+                                title: const Text('User Profile'),
+                              ),
+                              actions: [
+                                SignedOutAction((context) {
+                                  Navigator.of(context).pop();
+                                })
+                              ],
+                            )));
+              })
         ],
       ),
       bottomNavigationBar: BottomNavigationWidget(
@@ -73,10 +77,7 @@ void _navigateToPage(int index, BuildContext context) {
         Navigator.pushNamed(context, '/drawer');
         break;
       case 2:
-        Navigator.pushNamed(context, '/lookbook_21');
-        break;
-      case 3:
-        Navigator.pushNamed(context,'/person_1');
+        Navigator.pushNamed(context, '/cart');
       // Add cases for other pages
     }
   }
@@ -138,22 +139,17 @@ Widget build(BuildContext context) {
         label: 'Home',
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.photo_library),
-        label: 'Shop',
+        icon: Icon(Icons.search),
+        label: 'Search',
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.add_shopping_cart),
         label: 'Shopping_cart',
       ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.person),
-        label: 'Person',
-      ),
     ],
     currentIndex: currentIndex,
     onTap: onTap,
-    selectedItemColor: Colors.black,
-    unselectedItemColor: Colors.grey,
+    fixedColor: Colors.grey,
     );
   }
 

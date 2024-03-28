@@ -30,18 +30,12 @@ class MyDrawer extends StatelessWidget {
               Navigator.popAndPushNamed(context, '/');
             },
           ),
-          ListTile(
-            title: const Text('CURRENCY\$'),
-            onTap: () {
-              Navigator.popAndPushNamed(context, '/currency');
-            },
-          ),
-          ListTile(
-            title: const Text('LANGUAGE'),
-            onTap: () {
-              Navigator.popAndPushNamed(context, '/language');
-            },
-          ),
+          // ListTile(
+          //   title: const Text('LANGUAGE'),
+          //   onTap: () {
+          //     Navigator.popAndPushNamed(context, '/language');
+          //   },
+          // ),
           ListTile(
             title: const Text('STORE'),
             onTap: () {
@@ -66,24 +60,24 @@ class MyDrawer extends StatelessWidget {
               Navigator.popAndPushNamed(context, '/lookbook_23');
             },
           ),
-          ListTile(
-            title: const Text('CONCEPT PROJECT'),
-            onTap: () {
-              Navigator.popAndPushNamed(context, '/concept project');
-            },
-          ),
+          // ListTile(
+          //   title: const Text('CONCEPT PROJECT'),
+          //   onTap: () {
+          //     Navigator.popAndPushNamed(context, '/concept project');
+          //   },
+          // ),
           ListTile(
             title: const Text('About MillionFlash'),
             onTap: () {
               Navigator.popAndPushNamed(context, '/about millionflash');
             },
           ),
-          ListTile(
-            title: const Text('PX'),
-            onTap: () {
-              Navigator.popAndPushNamed(context, '/px');
-            },
-          ),
+          // ListTile(
+          //   title: const Text('PX'),
+          //   onTap: () {
+          //     Navigator.popAndPushNamed(context, '/px');
+          //   },
+          // ),
         ],
       ),
     );

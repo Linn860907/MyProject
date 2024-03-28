@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "764475060735",
+    "firebase_url": "https://linnonlineshop-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "linnonlineshop",
     "storage_bucket": "linnonlineshop.appspot.com"
   },
@@ -14,16 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "764475060735-g0el34o4vqmd77r7hfv1klog3bnerbr6.apps.googleusercontent.com",
+          "client_id": "764475060735-0cl6fd2uvcdv8d0hm8f98spusl546bac.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.onlineshop",
-            "certificate_hash": "e373098cacc0bbd077f5054dd291550dc61ba2d5"
+            "certificate_hash": "34896e93649312bd4dce68feb494e8bbce1f80a2"
           }
-        },
-        {
-          "client_id": "764475060735-cftdnm7k3a193v5qt5e7rcalva6f3vpu.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -33,19 +30,7 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "764475060735-cftdnm7k3a193v5qt5e7rcalva6f3vpu.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "764475060735-4r1vu2f2vjj6o71jvob1heuv1v24hini.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.onlineshop"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -12,9 +12,13 @@ Future<String?> getImage(String? imgName) async {
     try { 
     var urlRef = firebaseStorage
           .child("mfonlineshop") //folder name
-          .child('imgName.toLowerCase().jpg');
-      var imgUrl = await urlRef.getDownloadURL(); //images name
+          .child('${imgName.toLowerCase()}.jpg');
+      var imgUrl = await urlRef.getDownloadURL();
+      
+      return imgUrl;
+       //images name
     } catch (e) {
+      print('Error getting images URL()');
       return null;
     }
   }
