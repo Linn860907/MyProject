@@ -2,7 +2,7 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshop/firebase/home.dart';
 import 'package:onlineshop/itemlist/cart_product.dart';
-import 'package:onlineshop/itemlist/shopping_cart.dart';
+import 'package:onlineshop/itemlist/store.dart';
 import '../drawer.dart';
 import 'widget.dart';
 
@@ -29,10 +29,8 @@ class ProductDetails extends StatefulWidget {
 
 class _ProductDetailsState extends State<ProductDetails> {
   int _currentIndex = 0;
-  // 添加方法将产品添加到购物车
   void _addToCart() {
-    // 在这里添加产品到购物车的逻辑
-    // 暂时假设添加到购物车的方法为addToCart，您可以根据实际情况进行调整
+
     shopC.items_list.add({
       'name': widget.product_detail_name,
       'image': widget.product_detail_images,
@@ -40,7 +38,6 @@ class _ProductDetailsState extends State<ProductDetails> {
     });
     
 
-    // 提示用户已成功添加到购物车
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Product added to cart'),
@@ -54,17 +51,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       drawer: const MyDrawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/IMG_8162.jpeg'),
-              fit: BoxFit.scaleDown,
-            ),
-          ),
-          height: 80,
-        ),
-        elevation: 0.0,
-        automaticallyImplyLeading: true,
+        title: Text('MillionFlash'),
         actions: <Widget>[
           IconButton(icon: const Icon(Icons.add_shopping_cart),
           onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> const cart_product()));}),
@@ -175,10 +162,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => const cart_product()));
                   }),
-              IconButton(
-                  icon: const Icon(Icons.favorite_border, color: Colors.red),
-                  onPressed: () {Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const cart_product()));}),
             ],
           ),
           const Divider(),
@@ -236,7 +219,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           const Divider(),
           Container(
             height: 360.0,
-            child: const Similar_products(),
+            child: const items_(),
           ),
         ],
       ),

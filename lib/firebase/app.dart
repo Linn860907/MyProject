@@ -11,50 +11,11 @@ import '../lookbook/lookbook_22.dart';
 import '../lookbook/lookbook_23.dart';
 import '../itemlist/store.dart';
 import '../itemlist/AboutMillionFlash.dart';
-import 'person.dart';
-import '../itemlist/shopping_cart.dart';
 import '../category_page.dart';
 import '../firebase/app.dart';
 import '../firebase_options.dart';
 import '../itemlist/cart_product.dart';
 import '../itemlist/shopc.dart';
-
-
-// class MyApp extends StatelessWidget {
-// const MyApp({super.key});
-
-// @override
-// Widget build(BuildContext context) {
-//   return GetMaterialApp(
-//     key: UniqueKey(),
-//     theme: ThemeData(
-//       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-//       useMaterial3: true,
-//     ),
-    
-//     routes: {
-//       '/home_title': (context) => home_title(),
-//       '/currency': (context) => const Currency(),
-//       '/language': (context) => const language(),
-//       '/store': (context) => store(),
-//       '/lookbook_21': (context) => const lookBook_21(),
-//       '/lookbook_22': (context) => const lookBook_22(),
-//       '/lookbook_23': (context) => const lookBook_23(),
-//       '/concept project': (context) => const ConceptProject(),
-//       '/about millionflash': (context) => const AboutMillionFlash(),
-//       '/drawer': (context) => const MyDrawer(),
-//       '/person_1': (context) => const person_1(),
-//       '/cart': (context) => const cart(),
-//       '/category_page': (context) => const CategoryPage(),
-//       '/px': (context) =>  const px(),
-//     },
-    
-//     home: const AuthGate(),
-//     //home: const IndexPage(),
-//   );
-// }
-// }
-
 
 
 class MyApp extends StatelessWidget {
@@ -63,6 +24,7 @@ const MyApp({super.key});
 @override
 Widget build(BuildContext context) {
   return GetMaterialApp(
+    debugShowCheckedModeBanner: false,
     key: UniqueKey(),
     theme: ThemeData(
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

@@ -6,7 +6,6 @@ import '../drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'product_detail.dart';
-import 'shopping_cart.dart';
 import 'widget.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 
@@ -26,18 +25,8 @@ class _storeState extends State<store> {
       drawer: const MyDrawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/IMG_8162.jpeg'),
-              fit: BoxFit.scaleDown,
-            ),
-          ),
-          height: 80,
-        ),
-        elevation: 0.0,
-        automaticallyImplyLeading: true,
-                actions: <Widget>[
+        title: Text('MillionFlash'),
+          actions: <Widget>[
           IconButton(icon: const Icon(Icons.add_shopping_cart),
           onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> const cart_product()));}),
           IconButton(

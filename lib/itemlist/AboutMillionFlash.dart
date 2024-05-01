@@ -16,7 +16,9 @@ class _AboutMillionFlashState extends State<AboutMillionFlash> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
+       
       drawer: const MyDrawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(

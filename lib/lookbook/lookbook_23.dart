@@ -17,20 +17,12 @@ class _lookBook_23State extends State<lookBook_23> {
  @override
    Widget build(BuildContext context) {
       return Scaffold(
+        
       drawer: const MyDrawer(),
       backgroundColor: Colors.white,
+      
       appBar: AppBar(
-        title: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/IMG_8162.jpeg'),
-              fit: BoxFit.scaleDown,
-            ),
-          ),
-          height: 80,
-        ),
-        elevation: 0.0,
-        automaticallyImplyLeading: true,
+        title: Text('MillionFlash'),
         actions: <Widget>[
           IconButton(icon: const Icon(Icons.add_shopping_cart),
           onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> const cart_product()));}),
